@@ -1,0 +1,16 @@
+li{
+    color:white;
+    padding:10px;
+   list-style: none;
+}
+h3{
+    color: white;
+    margin-bottom: auto;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: chartreuse;
+}
