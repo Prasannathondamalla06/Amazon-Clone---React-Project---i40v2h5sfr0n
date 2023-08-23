@@ -40,7 +40,10 @@ import { autoPlay } from 'react-swipeable-views-utils';
       root: {
         width:"100%",
         flexGrow: 1,
-        marginTop:20
+        marginTop:20,
+        [theme.breakpoints.down('sm')]: {
+          marginTop: 100, // Adjust the margin for smaller screens
+        },
       },
       header: {
         display: 'flex',
@@ -56,6 +59,7 @@ import { autoPlay } from 'react-swipeable-views-utils';
         overflow: 'hidden',
         width: '100%',
       },
+      
     }));
     
     

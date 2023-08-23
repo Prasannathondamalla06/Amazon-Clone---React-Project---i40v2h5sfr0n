@@ -18,6 +18,7 @@ import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import zIndex from "@material-ui/core/styles/zIndex";
 
+
 const ProductDetail = ({ onSelectedItem, selectedItems }) => {
   const params = useParams();
 
@@ -42,7 +43,7 @@ const ProductDetail = ({ onSelectedItem, selectedItems }) => {
   const isItem = selectedItems.some((item) => item.id === productInfo.id);
 
   return (
-    <Container maxWidth="md" style={{ padding: "20px" }}>
+    <Container maxWidth="md" style={{ padding: "20px" ,marginLeft:"0"}}>
       <Grid container spacing={2}>
         <Card>
           <CardActionArea
@@ -72,7 +73,7 @@ const ProductDetail = ({ onSelectedItem, selectedItems }) => {
               >
                 {productInfo.title}
               </Typography>
-              <Rating name="read-only" value={productInfo.rating} readOnly />
+              {/* <Rating name="read-only" value={productInfo.rating} readOnly /> */}
 
               <Typography
                 gutterBottom

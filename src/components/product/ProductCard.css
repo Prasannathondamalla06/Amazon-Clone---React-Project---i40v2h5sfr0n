@@ -1,0 +1,47 @@
+@media(min-width: 576px) and (max-width: 780px) {
+  .res {
+    width: 100%;
+   margin:15px;
+   
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .res image {
+    
+    margin: 20px;
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .res h2 {
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  .res p {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .res button {
+    width: 50%;
+    font-size: 12px;
+    padding: 6px;
+    align-items: center;
+  }
+}

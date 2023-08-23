@@ -20,8 +20,8 @@ export default function Cart({ selectedItems,handleRemoveFromCart }) {
   const handleRemoveFromCartLocal = (cartindex) => {
     handleRemoveFromCart(cartindex); // Call the parent's function
   };
-
-
+   
+ 
   return (
     <div>
       {selectedItems.length === 0 && <div>you have no items yet</div>}
@@ -88,11 +88,16 @@ export default function Cart({ selectedItems,handleRemoveFromCart }) {
         Total{" ₹"}
         {CART
           .map((item) => item.price * item.quantity)
-          .reduce((total, value) => total + value, 0)}
+         .reduce ((total, value) => total + value+5/100*(value),0) }
       </p>
 
-      {!user ? <Link to='/login'><Button  style={{margin:"20px",padding:"8px",color:"white",backgroundColor:"orchid"}}>Login to proceed</Button> </Link>
-       : <Link to='/checkout'> <Button  style={{margin:"20px",padding:"8px",color:"white",backgroundColor:"orchid"}}>Proceed to Buy</Button> </Link>}
+      {!user ? (<Link to='/login'><Button  style={{margin:"20px",padding:"8px",color:"white",backgroundColor:"orchid"}}>Login to proceed</Button> </Link>)
+       : (CART.length===0 ?(<Button
+      style={{ margin: "20px", padding: "8px", color: "white", backgroundColor: "orchid" }}
+      disabled
+    >
+      Proceed to Buy
+    </Button>):(<Link to='/checkout'> <Button  style={{margin:"20px",padding:"8px",color:"white",backgroundColor:"orchid"}}>Proceed to Buy</Button> </Link>))}
     </div>
   );
 }

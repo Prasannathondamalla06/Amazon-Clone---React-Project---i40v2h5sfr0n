@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import { auth } from "./firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import CheckOut  from "./checkOut";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -61,7 +62,7 @@ export default function Login() {
               setPassword(e.target.value);
             }}
           />
-          <button onClick={signIn} type="submit" className="login_signInButton">
+          <button onClick={()=>{navigate("/checkout")}} type="submit" className="login_signInButton">
             Sign In
           </button>
           <p>

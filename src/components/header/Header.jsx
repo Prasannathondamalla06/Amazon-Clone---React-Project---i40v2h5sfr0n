@@ -45,7 +45,7 @@ const Header = ({ data, selectedItems }) => {
       </Link>
 
       <div className="header__search">
-        <span onClick={() => setShowAll(!showAll)} className="arrow">
+        <span  className="arrow">
           All<span></span>
           <ArrowDropDownIcon />
         </span>
@@ -72,8 +72,11 @@ const Header = ({ data, selectedItems }) => {
           type="text"
           value={search}
           onChange={(e) => {setSearch(e.target.value)
-            setShowModal(true)
+           // setShowModal(true)
+            setShowModal(e.target.value);
+           
             }}
+            
         />
         <SearchIcon className="header__searchIcon" />
        {showModal && (
@@ -81,8 +84,10 @@ const Header = ({ data, selectedItems }) => {
           <ul className="list">
             {data.map((item) => {
               console.log(item);
+              
+
               return (
-                <div onClick={() => onClick(item.category)}>
+                <div >
                   {" "}
                   <li className="it" key={item.id}  onClick={() => {
                         navigate(`/product-details/${item.id}`);
@@ -104,7 +109,7 @@ const Header = ({ data, selectedItems }) => {
         <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header_option">
             <span className="header_optionLineOne">
-              Hello {!user ? "Guest" : user?.email}
+              Hello {!user ? "Guest" : user?.email?.includes('@') ? user.email.split('@')[0] : user.email}
             </span>
             <div className="header_optionLineTwo">
               {user ? "Sign Out" : "Sign In"}

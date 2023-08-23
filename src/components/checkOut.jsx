@@ -55,7 +55,7 @@ export default function CheckOut() {
       marginTop: "30px",
     }}
   >
-    <form style={{ display: "flex", flexDirection: "column", marginTop: 70 }}>
+    <form style={{ display: "flex", flexDirection: "column", marginTop: 70 ,backgroundColor:"pink"}}>
       <label>First Name</label>
       <input
         type="text"
@@ -106,9 +106,9 @@ export default function CheckOut() {
         style={{
           padding: "10px",
           marginTop: "10px",
-          backgroundColor: "blue",
+          backgroundColor: "lightgreen",
           opacity: "0.7",
-          color: "white",
+          color: "black",
           borderRadius: "5px",
           cursor: "pointer",
         }}

@@ -13,6 +13,7 @@ import axios from "axios";
 import { Filter } from "@material-ui/icons";
 import Fliter from "./header/Fliter";
 import CheckOut from "./checkOut";
+import "../styles/App.css";
 
 const App = () => {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -50,11 +51,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Header
-          data={data}
-          selectedItems={selectedItems}
-          
-        />
+        <Header data={data} selectedItems={selectedItems} />
 
         <Routes>
           <Route

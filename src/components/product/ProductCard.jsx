@@ -8,6 +8,9 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Rating from "@material-ui/lab/Rating";
 import Grid from "@material-ui/core/Grid";
+import "./ProductCard.css";
+
+
 
 import Cart from "../header/Cart";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 const ProductCard = ({ data, onSelectedItem, selectedItems }) => {
   const product = data;
   console.log(product, "prod")
+   
 
   const navigate = useNavigate();
   const isItem = selectedItems?.some((item) => item.id === product.id);
@@ -24,9 +28,9 @@ const ProductCard = ({ data, onSelectedItem, selectedItems }) => {
   };
 
   return (
-    <div>
-      <Card style={{ width: "22rem" }}>
-        <CardActionArea>
+    <div >
+      <Card style={{width:"22rem"}} className="res" >
+        <CardActionArea  >
           <CardMedia
             onClick={onClick}
             component="img"
@@ -87,11 +91,7 @@ const ProductCard = ({ data, onSelectedItem, selectedItems }) => {
         </CardActionArea>
       </Card>
 
-      <CardActions></CardActions>
-
-      {/* <Button variant="contained" color="primary">
-        Add to Cart
-      </Button> */}
+     
     </div>
   );
 };
