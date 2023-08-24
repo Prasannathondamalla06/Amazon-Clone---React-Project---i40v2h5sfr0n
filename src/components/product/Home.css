@@ -13,9 +13,9 @@
 @media (min-width: 576px) and (max-width: 780px) {
   .product .MuiGrid-item {
     box-sizing: border-box;
-    flex-basis: calc(50% - 10px); /* Adjust the percentage and spacing as needed */
-    max-width: calc(50% - 10px); /* Adjust the percentage and spacing as needed */
-    margin: 5px; /* Add margin to create space between items */
+    flex-basis: calc(100% - 10px); 
+    max-width: calc(100% - 10px); 
+    margin: 5px; 
     padding: 10px;
     flex-wrap: wrap;
   }
