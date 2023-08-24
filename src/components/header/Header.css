@@ -92,7 +92,7 @@
   color: white;
 }
 .arrow {
-  /* width:14px; */
+  
   font-size: small;
   display: flex;
   justify-content: center;
@@ -109,8 +109,7 @@
 .list {
   
   
- /* width:200px;
-  height: 400px; */
+ 
   overflow-x: hidden;
   padding: 10px;
   
@@ -138,12 +137,12 @@
 
   .header__search {
     width: 100%;
-    margin-top: 10px; /* Adjust top margin for spacing */
-    justify-content: center; /* Center the search input */
+    margin-top: 10px; 
+    justify-content: center; 
   }
 
   .header__searchInput {
-    width: 70%; /* Full width for better mobile experience */
+    width: 70%; 
   }
 
   .header__nav {
@@ -155,15 +154,12 @@
   }
 
   .header__option {
-    margin: 0; /* Reset margin for individual options */
-    
+    margin: 0; 
   }
 
-  .arrow {
-    /* You can adjust these styles as needed */
-  }
+  
 
   .list {
-    /* You can adjust these styles as needed */
+    
   }
 }
