@@ -73,7 +73,7 @@ const ProductDetail = ({ onSelectedItem, selectedItems }) => {
               >
                 {productInfo.title}
               </Typography>
-              {/* <Rating name="read-only" value={productInfo.rating} readOnly /> */}
+              <Rating name="read-only" value={productInfo.rating} readOnly />
 
               <Typography
                 gutterBottom
